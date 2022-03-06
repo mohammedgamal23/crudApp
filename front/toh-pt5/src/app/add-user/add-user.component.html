@@ -1,0 +1,72 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input
+          class="form-control"
+          id="id"
+          required
+          [(ngModel)]="heroUser.id"
+          name="id"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="heroUser.name"
+          name="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="heroUser.email"
+          name="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="heroUser.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          required
+          [(ngModel)]="heroUser.phone"
+          name="phone"
+        />
+      </div>
+
+
+      <button (click)="saveUser()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>User was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newUser()">Add</button>
+    </div>
+  </div>
+</div>
